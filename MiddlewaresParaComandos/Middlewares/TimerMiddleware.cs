@@ -13,7 +13,7 @@ namespace MiddlewaresParaComandos.Middlewares
 
             try
             {
-                next.Invoke(command);
+                next(command);
             }
             finally
             {

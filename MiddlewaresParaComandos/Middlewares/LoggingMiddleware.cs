@@ -8,7 +8,7 @@ namespace MiddlewaresParaComandos.Middlewares
         public void Execute(Command command, Action<Command> next)
         {
             Console.WriteLine("[LOG] - Início - " + command.GetType());
-            next.Invoke(command);
+            next(command);
             Console.WriteLine("[LOG] - Fim - " + command.GetType());
         }
     }

@@ -9,7 +9,7 @@ namespace MiddlewaresParaComandos.Middlewares
         public void Execute(Command command, Action<Command> next)
         {
             using (var ts = new TransactionScope())
-                next.Invoke(command);
+                next(command);
         }
     }
 }
